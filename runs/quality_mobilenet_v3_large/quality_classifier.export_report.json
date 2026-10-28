@@ -1,0 +1,7 @@
+{
+  "ckpt": "runs/quality_mobilenet_v3_large/best.pth",
+  "out": "runs/quality_mobilenet_v3_large/quality_classifier.mlpackage",
+  "ok": true,
+  "converted": true,
+  "verify": "not requested (--verify-image)"
+}

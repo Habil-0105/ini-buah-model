@@ -1,0 +1,23 @@
+,avocado/1_unripe,avocado/2_semiripe,avocado/3_ripe,avocado/4_overripe,avocado/5_rotten,dragon_fruit/Immature Dragon Fruit,dragon_fruit/Mature Dragon Fruit,mango/Fully Ripe,mango/Overripe,mango/Perished,mango/Semiripe,mango/Unripe,papaya/ripe,papaya/rotten,papaya/semiripe,papaya/unripe,pineapple/ripe,pineapple/semiripe,pineapple/unripe,sawo/ripe,sawo/rotten,sawo/unripe
+avocado/1_unripe,476,31,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avocado/2_semiripe,87,188,41,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avocado/3_ripe,0,32,248,65,49,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avocado/4_overripe,0,0,49,169,260,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avocado/5_rotten,0,0,2,25,381,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+dragon_fruit/Immature Dragon Fruit,0,0,0,0,0,101,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+dragon_fruit/Mature Dragon Fruit,0,0,0,0,0,0,112,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+mango/Fully Ripe,0,0,0,0,0,0,0,111,7,0,2,0,0,0,0,0,0,0,0,0,0,0
+mango/Overripe,0,0,0,0,0,0,0,7,120,1,0,0,0,0,0,0,0,0,0,0,0,0
+mango/Perished,0,0,0,0,0,0,0,0,2,24,0,0,0,0,0,0,0,0,0,0,0,0
+mango/Semiripe,0,0,0,0,0,0,0,1,0,0,161,3,0,0,0,0,0,0,0,0,0,0
+mango/Unripe,0,0,0,0,0,0,0,0,0,0,2,190,0,0,0,0,0,0,0,0,0,0
+papaya/ripe,0,0,0,0,0,0,0,0,0,0,0,0,63,0,0,0,0,0,0,0,0,0
+papaya/rotten,0,0,0,0,0,0,0,0,0,0,0,0,0,81,0,0,0,0,0,0,0,0
+papaya/semiripe,0,0,0,0,0,0,0,0,0,0,0,0,3,0,63,0,0,0,0,0,0,0
+papaya/unripe,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,76,0,0,0,0,0,0
+pineapple/ripe,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1209,182,10,0,0,0
+pineapple/semiripe,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,48,859,40,0,0,0
+pineapple/unripe,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,212,974,0,0,0
+sawo/ripe,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,30,0,8
+sawo/rotten,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,59,0
+sawo/unripe,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,14

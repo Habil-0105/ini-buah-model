@@ -1,0 +1,37 @@
+{
+  "task": "ripeness",
+  "label_space": "native",
+  "classes": [
+    "avocado/1_unripe",
+    "avocado/2_semiripe",
+    "avocado/3_ripe",
+    "avocado/4_overripe",
+    "avocado/5_rotten",
+    "dragon_fruit/Immature Dragon Fruit",
+    "dragon_fruit/Mature Dragon Fruit",
+    "mango/Fully Ripe",
+    "mango/Overripe",
+    "mango/Perished",
+    "mango/Semiripe",
+    "mango/Unripe",
+    "papaya/ripe",
+    "papaya/rotten",
+    "papaya/semiripe",
+    "papaya/unripe",
+    "pineapple/ripe",
+    "pineapple/semiripe",
+    "pineapple/unripe",
+    "sawo/ripe",
+    "sawo/rotten",
+    "sawo/unripe"
+  ],
+  "ripeness_fruits": [
+    "avocado",
+    "dragon_fruit",
+    "mango",
+    "papaya",
+    "pineapple",
+    "sawo"
+  ],
+  "quality_fruits": []
+}

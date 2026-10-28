@@ -1,0 +1,7 @@
+{
+  "ckpt": "runs/ripeness_with_dragon_maturity/best.pth",
+  "out": "runs/ripeness_with_dragon_maturity/ripeness_classifier.mlpackage",
+  "ok": true,
+  "converted": true,
+  "verify": "not requested (--verify-image)"
+}

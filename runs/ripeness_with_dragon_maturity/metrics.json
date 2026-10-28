@@ -1,0 +1,390 @@
+{
+  "task": "ripeness",
+  "arch": "mobilenet_v3_large",
+  "label_space": "native",
+  "best_epoch": 3,
+  "device": "mps",
+  "seed": 42,
+  "config": {
+    "arch": "mobilenet_v3_large",
+    "pretrained": true,
+    "img_size": 224,
+    "batch_size": 64,
+    "epochs": 15,
+    "warmup_epochs": 1,
+    "lr_head": 0.001,
+    "lr_backbone": 0.0002,
+    "weight_decay": 0.0001,
+    "label_smoothing": 0.05,
+    "early_stop_patience": 3,
+    "cap_per_class_per_epoch": 1500,
+    "workers": 0,
+    "device": "auto",
+    "ripeness_labels": "native",
+    "runs_dir": "runs"
+  },
+  "classes": [
+    "avocado/1_unripe",
+    "avocado/2_semiripe",
+    "avocado/3_ripe",
+    "avocado/4_overripe",
+    "avocado/5_rotten",
+    "dragon_fruit/Immature Dragon Fruit",
+    "dragon_fruit/Mature Dragon Fruit",
+    "mango/Fully Ripe",
+    "mango/Overripe",
+    "mango/Perished",
+    "mango/Semiripe",
+    "mango/Unripe",
+    "papaya/ripe",
+    "papaya/rotten",
+    "papaya/semiripe",
+    "papaya/unripe",
+    "pineapple/ripe",
+    "pineapple/semiripe",
+    "pineapple/unripe",
+    "sawo/ripe",
+    "sawo/rotten",
+    "sawo/unripe"
+  ],
+  "val": {
+    "n": 6886,
+    "accuracy": 0.8389485913447575,
+    "balanced_accuracy": 0.8724661346169562,
+    "macro_f1": 0.8733541390954694,
+    "per_class": {
+      "avocado/1_unripe": {
+        "precision": 0.8646209386281588,
+        "recall": 0.9392156862745098,
+        "f1-score": 0.900375939849624,
+        "support": 510
+      },
+      "avocado/2_semiripe": {
+        "precision": 0.7044673539518901,
+        "recall": 0.640625,
+        "f1-score": 0.6710310965630114,
+        "support": 320
+      },
+      "avocado/3_ripe": {
+        "precision": 0.7450424929178471,
+        "recall": 0.6709183673469388,
+        "f1-score": 0.7060402684563758,
+        "support": 392
+      },
+      "avocado/4_overripe": {
+        "precision": 0.7322834645669292,
+        "recall": 0.3940677966101695,
+        "f1-score": 0.512396694214876,
+        "support": 472
+      },
+      "avocado/5_rotten": {
+        "precision": 0.5723076923076923,
+        "recall": 0.9117647058823529,
+        "f1-score": 0.7032136105860114,
+        "support": 408
+      },
+      "dragon_fruit/Immature Dragon Fruit": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 101
+      },
+      "dragon_fruit/Mature Dragon Fruit": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 113
+      },
+      "mango/Fully Ripe": {
+        "precision": 0.9032258064516129,
+        "recall": 0.9333333333333333,
+        "f1-score": 0.9180327868852459,
+        "support": 120
+      },
+      "mango/Overripe": {
+        "precision": 0.9609375,
+        "recall": 0.9609375,
+        "f1-score": 0.9609375,
+        "support": 128
+      },
+      "mango/Perished": {
+        "precision": 1.0,
+        "recall": 0.9230769230769231,
+        "f1-score": 0.96,
+        "support": 26
+      },
+      "mango/Semiripe": {
+        "precision": 0.9506172839506173,
+        "recall": 0.9333333333333333,
+        "f1-score": 0.9418960244648318,
+        "support": 165
+      },
+      "mango/Unripe": {
+        "precision": 0.979381443298969,
+        "recall": 0.9844559585492227,
+        "f1-score": 0.9819121447028424,
+        "support": 193
+      },
+      "papaya/ripe": {
+        "precision": 0.9545454545454546,
+        "recall": 1.0,
+        "f1-score": 0.9767441860465116,
+        "support": 63
+      },
+      "papaya/rotten": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 81
+      },
+      "papaya/semiripe": {
+        "precision": 1.0,
+        "recall": 0.9565217391304348,
+        "f1-score": 0.9777777777777777,
+        "support": 69
+      },
+      "papaya/unripe": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 71
+      },
+      "pineapple/ripe": {
+        "precision": 0.945619335347432,
+        "recall": 0.8936473947180585,
+        "f1-score": 0.9188990825688074,
+        "support": 1401
+      },
+      "pineapple/semiripe": {
+        "precision": 0.7008964955175224,
+        "recall": 0.9071729957805907,
+        "f1-score": 0.7908045977011494,
+        "support": 948
+      },
+      "pineapple/unripe": {
+        "precision": 0.97165991902834,
+        "recall": 0.8067226890756303,
+        "f1-score": 0.8815426997245179,
+        "support": 1190
+      },
+      "sawo/ripe": {
+        "precision": 0.8947368421052632,
+        "recall": 0.8717948717948718,
+        "f1-score": 0.8831168831168831,
+        "support": 39
+      },
+      "sawo/rotten": {
+        "precision": 0.8970588235294118,
+        "recall": 1.0,
+        "f1-score": 0.9457364341085271,
+        "support": 61
+      },
+      "sawo/unripe": {
+        "precision": 0.7777777777777778,
+        "recall": 0.4666666666666667,
+        "f1-score": 0.5833333333333334,
+        "support": 15
+      }
+    },
+    "accuracy_by_fruit": {
+      "avocado": {
+        "n": 2102,
+        "accuracy": 0.7159847764034253
+      },
+      "dragon_fruit": {
+        "n": 214,
+        "accuracy": 1.0
+      },
+      "mango": {
+        "n": 632,
+        "accuracy": 0.9541139240506329
+      },
+      "papaya": {
+        "n": 284,
+        "accuracy": 0.9894366197183099
+      },
+      "pineapple": {
+        "n": 3539,
+        "accuracy": 0.8680418197230856
+      },
+      "sawo": {
+        "n": 115,
+        "accuracy": 0.8869565217391304
+      }
+    }
+  },
+  "test": {
+    "n": 6886,
+    "accuracy": 0.829073482428115,
+    "balanced_accuracy": 0.8839015410444554,
+    "macro_f1": 0.8761738513724154,
+    "per_class": {
+      "avocado/1_unripe": {
+        "precision": 0.8454706927175843,
+        "recall": 0.937007874015748,
+        "f1-score": 0.8888888888888888,
+        "support": 508
+      },
+      "avocado/2_semiripe": {
+        "precision": 0.749003984063745,
+        "recall": 0.5911949685534591,
+        "f1-score": 0.6608084358523726,
+        "support": 318
+      },
+      "avocado/3_ripe": {
+        "precision": 0.7294117647058823,
+        "recall": 0.6294416243654822,
+        "f1-score": 0.6757493188010899,
+        "support": 394
+      },
+      "avocado/4_overripe": {
+        "precision": 0.65,
+        "recall": 0.35355648535564854,
+        "f1-score": 0.45799457994579945,
+        "support": 478
+      },
+      "avocado/5_rotten": {
+        "precision": 0.5505780346820809,
+        "recall": 0.9338235294117647,
+        "f1-score": 0.6927272727272727,
+        "support": 408
+      },
+      "dragon_fruit/Immature Dragon Fruit": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 101
+      },
+      "dragon_fruit/Mature Dragon Fruit": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 112
+      },
+      "mango/Fully Ripe": {
+        "precision": 0.9327731092436975,
+        "recall": 0.925,
+        "f1-score": 0.9288702928870293,
+        "support": 120
+      },
+      "mango/Overripe": {
+        "precision": 0.9302325581395349,
+        "recall": 0.9375,
+        "f1-score": 0.933852140077821,
+        "support": 128
+      },
+      "mango/Perished": {
+        "precision": 0.96,
+        "recall": 0.9230769230769231,
+        "f1-score": 0.9411764705882353,
+        "support": 26
+      },
+      "mango/Semiripe": {
+        "precision": 0.9757575757575757,
+        "recall": 0.9757575757575757,
+        "f1-score": 0.9757575757575757,
+        "support": 165
+      },
+      "mango/Unripe": {
+        "precision": 0.9844559585492227,
+        "recall": 0.9895833333333334,
+        "f1-score": 0.987012987012987,
+        "support": 192
+      },
+      "papaya/ripe": {
+        "precision": 0.9545454545454546,
+        "recall": 1.0,
+        "f1-score": 0.9767441860465116,
+        "support": 63
+      },
+      "papaya/rotten": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 81
+      },
+      "papaya/semiripe": {
+        "precision": 1.0,
+        "recall": 0.9545454545454546,
+        "f1-score": 0.9767441860465116,
+        "support": 66
+      },
+      "papaya/unripe": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 76
+      },
+      "pineapple/ripe": {
+        "precision": 0.9595238095238096,
+        "recall": 0.8629550321199143,
+        "f1-score": 0.9086809470124013,
+        "support": 1401
+      },
+      "pineapple/semiripe": {
+        "precision": 0.6855546687948922,
+        "recall": 0.9070749736008448,
+        "f1-score": 0.7809090909090909,
+        "support": 947
+      },
+      "pineapple/unripe": {
+        "precision": 0.951171875,
+        "recall": 0.8191757779646762,
+        "f1-score": 0.8802530501581564,
+        "support": 1189
+      },
+      "sawo/ripe": {
+        "precision": 0.967741935483871,
+        "recall": 0.7894736842105263,
+        "f1-score": 0.8695652173913043,
+        "support": 38
+      },
+      "sawo/rotten": {
+        "precision": 0.9833333333333333,
+        "recall": 0.9833333333333333,
+        "f1-score": 0.9833333333333333,
+        "support": 60
+      },
+      "sawo/unripe": {
+        "precision": 0.6363636363636364,
+        "recall": 0.9333333333333333,
+        "f1-score": 0.7567567567567568,
+        "support": 15
+      }
+    },
+    "accuracy_by_fruit": {
+      "avocado": {
+        "n": 2106,
+        "accuracy": 0.6942070275403609
+      },
+      "dragon_fruit": {
+        "n": 213,
+        "accuracy": 1.0
+      },
+      "mango": {
+        "n": 631,
+        "accuracy": 0.9603803486529319
+      },
+      "papaya": {
+        "n": 286,
+        "accuracy": 0.9895104895104895
+      },
+      "pineapple": {
+        "n": 3537,
+        "accuracy": 0.8600508905852418
+      },
+      "sawo": {
+        "n": 113,
+        "accuracy": 0.911504424778761
+      }
+    }
+  },
+  "caveats": [
+    "Splits are group-aware only where identifiers exist (avocado fruit_id, papaya frame blocks, pineapple/sawo source groups).",
+    "Mango/DragonFruit have no sample IDs: same-fruit photos may straddle splits, so scores are optimistic.",
+    "Papaya classes each come from a single video: papaya scores reflect scene identity as much as ripeness.",
+    "DragonFruit quality predicts Defect/Fresh from the supplied quality dataset; it is separate from maturity and needs independent validation.",
+    "Fruit-type data comes from different sources per fruit: the model may exploit background/camera cues.",
+    "Not production-ready evidence: validate on your own held-out phone photos/videos."
+  ]
+}

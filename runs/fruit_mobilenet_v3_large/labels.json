@@ -1,0 +1,14 @@
+{
+  "task": "fruit",
+  "label_space": "fruit",
+  "classes": [
+    "avocado",
+    "dragon_fruit",
+    "mango",
+    "papaya",
+    "pineapple",
+    "sawo"
+  ],
+  "ripeness_fruits": [],
+  "quality_fruits": []
+}

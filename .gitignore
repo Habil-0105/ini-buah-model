@@ -1,0 +1,27 @@
+# Python environments and local caches
+.venv/
+.venv-*/
+__pycache__/
+*.py[cod]
+.DS_Store
+
+# Raw classification and object-detection datasets
+/Banana/
+/DragonFruit/
+/Mango Shelf-Life Dataset/
+/avocado_hass_by_class/
+/papaya/
+/pineapple/
+/sawo/
+
+# Generated split manifests, reports, caches, and preprocessed detection data
+/artifacts/
+/detection_preprocessed/
+
+# Local test photos and videos stored at the project root
+/*.jpg
+/*.jpeg
+/*.png
+/*.mp4
+/*.mov
+/*.m4v

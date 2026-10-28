@@ -1,0 +1,13 @@
+# Python 3.10-3.12 recommended. coremltools 9.0 reports torch 2.7.0 as the newest version it was tested with,
+# if Core ML export misbehaves with a very new torch, install an older torch that your Python has wheels for.
+torch
+torchvision
+coremltools>=8.3
+numpy
+pandas
+scikit-learn
+pillow
+pyyaml
+matplotlib
+opencv-python-headless
+tqdm

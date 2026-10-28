@@ -1,0 +1,12 @@
+{
+  "task": "quality",
+  "label_space": "quality",
+  "classes": [
+    "Defect Dragon Fruit",
+    "Fresh Dragon Fruit"
+  ],
+  "ripeness_fruits": [],
+  "quality_fruits": [
+    "dragon_fruit"
+  ]
+}

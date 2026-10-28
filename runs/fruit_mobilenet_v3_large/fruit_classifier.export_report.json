@@ -1,0 +1,7 @@
+{
+  "ckpt": "runs/fruit_mobilenet_v3_large/best.pth",
+  "out": "runs/fruit_mobilenet_v3_large/fruit_classifier.mlpackage",
+  "ok": true,
+  "converted": true,
+  "verify": "not requested (--verify-image)"
+}

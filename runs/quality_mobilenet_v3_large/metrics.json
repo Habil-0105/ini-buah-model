@@ -1,0 +1,78 @@
+{
+  "task": "quality",
+  "arch": "mobilenet_v3_large",
+  "label_space": "quality",
+  "best_epoch": 1,
+  "device": "mps",
+  "seed": 42,
+  "config": {
+    "arch": "mobilenet_v3_large",
+    "pretrained": true,
+    "img_size": 224,
+    "batch_size": 64,
+    "epochs": 15,
+    "warmup_epochs": 1,
+    "lr_head": 0.001,
+    "lr_backbone": 0.0002,
+    "weight_decay": 0.0001,
+    "label_smoothing": 0.05,
+    "early_stop_patience": 3,
+    "cap_per_class_per_epoch": 1500,
+    "workers": 0,
+    "device": "auto",
+    "ripeness_labels": "native",
+    "runs_dir": "runs"
+  },
+  "classes": [
+    "Defect Dragon Fruit",
+    "Fresh Dragon Fruit"
+  ],
+  "val": {
+    "n": 222,
+    "accuracy": 0.9954954954954955,
+    "balanced_accuracy": 0.9953703703703703,
+    "macro_f1": 0.995491012491114,
+    "per_class": {
+      "Defect Dragon Fruit": {
+        "precision": 1.0,
+        "recall": 0.9907407407407407,
+        "f1-score": 0.9953488372093023,
+        "support": 108
+      },
+      "Fresh Dragon Fruit": {
+        "precision": 0.991304347826087,
+        "recall": 1.0,
+        "f1-score": 0.9956331877729258,
+        "support": 114
+      }
+    }
+  },
+  "test": {
+    "n": 221,
+    "accuracy": 0.995475113122172,
+    "balanced_accuracy": 0.9953271028037383,
+    "macro_f1": 0.9954691760460873,
+    "per_class": {
+      "Defect Dragon Fruit": {
+        "precision": 1.0,
+        "recall": 0.9906542056074766,
+        "f1-score": 0.9953051643192489,
+        "support": 107
+      },
+      "Fresh Dragon Fruit": {
+        "precision": 0.991304347826087,
+        "recall": 1.0,
+        "f1-score": 0.9956331877729258,
+        "support": 114
+      }
+    }
+  },
+  "caveats": [
+    "Splits are group-aware only where identifiers exist (avocado fruit_id, papaya frame blocks, pineapple/sawo source groups).",
+    "Mango/DragonFruit have no sample IDs: same-fruit photos may straddle splits, so scores are optimistic.",
+    "Papaya classes each come from a single video: papaya scores reflect scene identity as much as ripeness.",
+    "DragonFruit quality predicts Defect/Fresh from the supplied quality dataset; it is separate from maturity and needs independent validation.",
+    "Fruit-type data comes from different sources per fruit: the model may exploit background/camera cues.",
+    "Not production-ready evidence: validate on your own held-out phone photos/videos."
+  ]
+}

@@ -1,0 +1,55 @@
+# Label mapping. Original dataset terminology is kept verbatim.
+#
+# fruit_types: labels for the fruit-type classifier (from folder-level fruit identity).
+#
+# ripeness_native: the ORIGINAL ripeness labels per fruit. The ripeness model is trained on
+#   "<fruit>/<original label>" classes, so nothing is merged. Equivalence between datasets is NOT assumed.
+#   - mango: folder names of "Mango Shelf-Life Dataset"
+#   - avocado: folder names of avocado_hass_by_class (numeric prefix kept; derived by the build script)
+#   - papaya: labels from data.yaml (lowercase); crop folders add a numeric prefix which is stripped here
+#
+# DragonFruit maturity and quality are distinct outputs. Maturity is optionally included
+# in ripeness; quality is trained as a separate quality task because both can apply at once.
+#
+# normalized_stage: only used with train.ripeness_labels=normalized. Mapping is by IDENTICAL NAME ONLY
+#   (unripe, semiripe, ripe, overripe). It does not claim the dataset authors defined them identically.
+#   `null` = excluded from the normalized model: Half_Ripe, Fully Ripe, Perished, rotten/5_rotten/4_rotten.
+
+fruit_types: [avocado, dragon_fruit, mango, papaya, pineapple, sawo]
+
+quality_native:
+  dragon_fruit: [Defect Dragon Fruit, Fresh Dragon Fruit]
+
+ripeness_native:
+  mango: [Unripe, Semiripe, Fully Ripe, Overripe, Perished]
+  avocado: [1_unripe, 2_semiripe, 3_ripe, 4_overripe, 5_rotten]
+  papaya: [unripe, semiripe, ripe, rotten]
+  pineapple: [unripe, semiripe, ripe]
+  sawo: [unripe, ripe, rotten]
+
+normalized_stage:
+  mango:
+    Unripe: unripe
+    Semiripe: semiripe
+    Fully Ripe: null
+    Overripe: overripe
+    Perished: null
+  avocado:
+    1_unripe: unripe
+    2_semiripe: semiripe
+    3_ripe: ripe
+    4_overripe: overripe
+    5_rotten: null
+  papaya:
+    unripe: unripe
+    semiripe: semiripe
+    ripe: ripe
+    rotten: null
+  pineapple:
+    unripe: unripe
+    semiripe: semiripe
+    ripe: ripe
+  sawo:
+    unripe: unripe
+    ripe: ripe
+    rotten: null

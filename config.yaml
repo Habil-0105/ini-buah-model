@@ -1,0 +1,41 @@
+# Fruit classification MVP configuration. Edit here or override on the CLI.
+seed: 42
+data_root: "."            # dataset root. Override with --data-root.
+
+# Collection folders used by the current training pipeline, relative to data_root.
+paths:
+  dragon_maturity: "DragonFruit/Maturity_Grading"
+  dragon_quality: "DragonFruit/Quality_Grading"
+  mango: "Mango Shelf-Life Dataset"
+  avocado: "avocado_hass_by_class"
+  papaya_crops: "papaya/papaya_by_class"
+  pineapple_crops: "pineapple/pineapple_by_class"
+  sawo_crops: "sawo/sawo_by_class"
+
+prepare:
+  split_fractions: {val: 0.15, test: 0.15}
+  near_dup_hamming: 4          # dHash Hamming distance treated as near-duplicate (0 disables near-dup merging)
+  near_dup_max_group: 50       # near-duplicate merging never builds a group bigger than this
+  near_dup_max_bucket: 300     # skip LSH buckets larger than this (uninformative, e.g. blank backgrounds)
+  papaya_frame_block: 10       # frames per leakage-control block within one video
+  include_dragon_maturity_in_ripeness: true    # Include DragonFruit maturity labels as fruit-prefixed ripeness outputs; quality is a separate task.
+  workers: 4
+  artifacts_dir: "artifacts"
+
+train:
+  arch: mobilenet_v3_large     # mobilenet_v3_large | mobilenet_v3_small | efficientnet_b0
+  pretrained: true             # ImageNet weights (downloaded by torchvision on first use)
+  img_size: 224
+  batch_size: 64
+  epochs: 15
+  warmup_epochs: 1             # epochs with the backbone frozen (head only)
+  lr_head: 1.0e-3
+  lr_backbone: 2.0e-4
+  weight_decay: 1.0e-4
+  label_smoothing: 0.05
+  early_stop_patience: 3       # on validation macro-F1, counted after warmup
+  cap_per_class_per_epoch: 1500   # resampled every epoch; keeps avocado from dominating
+  workers: 4
+  device: auto                 # auto | cuda | mps | cpu
+  ripeness_labels: native      # native (fruit-prefixed original labels) | normalized (name-identical stages only)
+  runs_dir: "runs"
